@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FormTécnicoMonitorista</title>
+  <link rel="stylesheet" href="prueba.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+  <img src="Cassava.png" class="marca-agua izquierda" />
+  <img src="SC.png" class="marca-agua derecha" />
+
+  <div id="Prueba">
+    <div class="form-group">
+      <label for="Sucursal">Sucursal</label>
+      <input type="text" id="Sucursal" name="Sucursal">
+    </div>
+
+    <div class="form-group">
+      <label for="Fecha">Fecha</label>
+      <input type="date" id="Fecha" name="Fecha">
+    </div>
+
+    <div class="form-group">
+      <label for="Hora">Hora</label>
+      <input type="time" id="Hora" name="Hora">
+    </div>
+
+    <div class="form-group">
+      <label for="NoReporte">No. Reporte</label>
+      <input type="text" id="NoReporte" name="NoReporte">
+    </div>
+
+    <div class="form-group">
+      <label for="master">Master</label>
+      <select id="master" name="master">
+        <option value="" disabled selected>-- Selecciona una opción --</option>
+        <option value="Michael">Michael</option>
+        <option value="Avila">Avila</option>
+        <option value="Cesar">Cesar</option>
+        <option value="Jaime">Jaime</option>
+        <option value="Erick">Erick</option>
+        <option value="NAplica">No aplica</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="Franquicia">Franquicia</label>
+      <select id="Franquicia" name="Franquicia">
+        <option value="" disabled selected>-- Selecciona una opción --</option>
+        <option value="Si">Sí</option>
+        <option value="No">No</option>
+        <option value="NAplica">No aplica</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="servicio">Servicio</label>
+      <select id="servicio" name="servicio">
+        <option value="" disabled selected>-- Selecciona una opción --</option>
+        <option value="Instalacion">Instalación</option>
+        <option value="ServicioTecnico">Servicio Técnico</option>
+        <option value="MtoPreventivo">Mantenimiento Preventivo</option>
+        <option value="MtoCorrectivo">Mantenimiento Correctivo</option>
+        <option value="NuevaCamara">Nueva Cámara</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+
+    <!-- Tabla de Equipos -->
+    <table class="tabla-uniforme">
+      <thead>
+        <tr>
+          <th>Equipo</th>
+          <th>Observaciones</th>
+          <th>Equipo</th>
+          <th>Observaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cámaras</td>
+          <td><input type="text" name="ObsCamaras" placeholder="Observaciones"></td>
+          <td>Disco Duro</td>
+          <td><input type="text" name="ObsDiscoDuro" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Grabador DVR</td>
+          <td><input type="text" name="ObsGrabadorDVR" placeholder="Observaciones"></td>
+          <td>Transceptores</td>
+          <td><input type="text" name="ObsTransceptores" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Cableado Estructurado</td>
+          <td><input type="text" name="ObsCableado" placeholder="Observaciones"></td>
+          <td>Fuente de alimentación</td>
+          <td><input type="text" name="ObsFuente" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Micrófono</td>
+          <td><input type="text" name="ObsMicrofono" placeholder="Observaciones"></td>
+          <td>Cable de alimentación</td>
+          <td><input type="text" name="ObsCableAlim" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Pulpos de enlace</td>
+          <td><input type="text" name="ObsPulpos" placeholder="Observaciones"></td>
+          <td>Conectores</td>
+          <td><input type="text" name="ObsConectores" placeholder="Observaciones"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Tabla de Verificación -->
+    <table class="tabla-uniforme">
+      <thead>
+        <tr>
+          <th>Sección</th>
+          <th>Descripción</th>
+          <th>Observaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3"><strong>Verificación de la Imagen</strong></td>
+          <td>Calidad de la imagen</td>
+          <td><input type="text" name="ObsCalidadImagen" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Ángulo de visión</td>
+          <td><input type="text" name="ObsAnguloVision" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Iluminación</td>
+          <td><input type="text" name="ObsIluminacion" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td rowspan="2"><strong>Grabación y almacenamiento</strong></td>
+          <td>Acceso a grabaciones</td>
+          <td><input type="text" name="ObsAccesoGrabaciones" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Capacidad de almacenamiento</td>
+          <td><input type="text" name="ObsCapacidadAlmacenamiento" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td><strong>Conectividad</strong></td>
+          <td>Conexión a Internet</td>
+          <td><input type="text" name="ObsConexionInternet" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td rowspan="2"><strong>Mantenimiento</strong></td>
+          <td>Limpieza</td>
+          <td><input type="text" name="ObsLimpieza" placeholder="Observaciones"></td>
+        </tr>
+        <tr>
+          <td>Actualizaciones</td>
+          <td><input type="text" name="ObsActualizaciones" placeholder="Observaciones"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Área de firma -->
+    <div class="firmas-wrapper">
+  <div class="firma-container">
+    <label for="signature-pad">Firma del responsable</label>
+    <canvas id="signature-pad" width="300" height="150"></canvas>
+    <button class="btn-pdf" onclick="clearSignature('signature-pad')">Borrar Firma</button>
+  </div>
+
+  <div class="firma-container">
+    <label for="signature-pad-tecnico">Firma del técnico</label>
+    <canvas id="signature-pad-tecnico" width="300" height="150"></canvas>
+    <button class="btn-pdf" onclick="clearSignature('signature-pad-tecnico')">Borrar Firma</button>
+  </div>
+</div>
+
+    <div class="form-row center">
+      <button type="button" class="btn-pdf" onclick="generatePDF()">Generar PDF</button>
+    </div>
+  </div>
+
+  <script src="scriptp.js"></script>
+</body>
+</html>
